@@ -2,21 +2,33 @@ import React, {PropTypes} from 'react';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as outageActions from '../../actions/outageActions';
+import OutageList from './OutageList';
+import {browserHistory} from 'react-router';
 
 class OutagesPage extends React.Component {
     constructor(props, context) {
         super(props, context);
+
+        this.redirectToCreateOutagePage = this.redirectToCreateOutagePage.bind(this);
     }
 
-    outageRow(outage, index) {
-        return <div key={index}>{outage.title}</div>;
+    redirectToCreateOutagePage() {
+        browserHistory.push('/outage');
     }
 
     render() {
+        const {outages} = this.props;
+
         return (
             <div>
                 <h1>Outages</h1>
-                {this.props.outages.map(this.outageRow)}
+                <input
+                    type="submit"
+                    value="Create Outage"
+                    className="btn btn-primary"
+                    onClick={this.redirectToCreateOutagePage}
+                />
+                <OutageList outages={outages}/>
             </div>
         );
     }
