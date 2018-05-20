@@ -14,6 +14,7 @@
   "author": "Cory House",
   "license": "MIT",
   "dependencies": {
+    "@cityofzion/neon-js": "^3.7.3",
     "babel-polyfill": "6.8.0",
     "bootstrap": "3.3.6",
     "jquery": "2.2.3",
@@ -24,6 +25,7 @@
     "react-router-redux": "4.0.4",
     "redux": "3.5.2",
     "redux-thunk": "2.0.1",
+    "sjcl": "^1.0.7",
     "toastr": "2.1.2"
   },
   "devDependencies": {

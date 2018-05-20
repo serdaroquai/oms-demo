@@ -6,11 +6,11 @@ const OutageList = ({outages}) => {
         <table className="table">
             <thead>
                 <tr>
-                    <th>&nbsp;</th>
                     <th>Outage Id</th>
                     <th>Description</th>
                     <th>Start Date</th>
                     <th>End Date</th>
+                    <th>Outage Hash</th>
                 </tr>
             </thead>
             <tbody>
